@@ -16,6 +16,7 @@ flowchart TD
 ```
 
 ```mermaid
+flowchart TD
     A[Start] --> B[Generate RSA Private Key]
     B --> C[Extract Public Key]
     C --> D[Prepare Data Dictionary]
@@ -30,15 +31,15 @@ flowchart TD
 ```
 
 ```mermaid
-  flowchart TD
+flowchart TD
     A[Start] --> B[Load Public Key from public_key.pem]
     B --> C[Load Signature from signature.bin]
     C --> D[Prepare Data Dictionary]
-    D --> E[Canonicalize Data<br/>(sorted key=value pairs)]
-    E --> F[Convert to Bytes (UTF-8)]
-    F --> G[Verify Signature with Public Key<br/>PSS + SHA256]
-    G -->|Success| H[Print ✅ Imzo TO'G'RI]
-    G -->|Failure| I[Print ❌ Imzo XATO + Exception]
+    D --> E[Canonicalize Data - sorted key=value pairs]
+    E --> F[Convert to Bytes UTF-8]
+    F --> G[Verify Signature with Public Key PSS + SHA256]
+    G -->|Success| H[Print Imzo TO'G'RI]
+    G -->|Failure| I[Print Imzo XATO + Exception]
     H --> J[Return True]
     I --> K[Return False]
     J --> L[End]
