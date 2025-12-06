@@ -1,5 +1,5 @@
 # kiberxavfsizlik
-'''
+```mermaid
 flowchart TD
     A[Start] --> B[generate_rsa_keys]
     B -->|RSA private_key yaratish| C[private_key]
@@ -12,4 +12,5 @@ flowchart TD
     H --> I[public_key.pem fayliga yozish]
 
     I --> J[Chiqarish: Kalit generatsiya va saqlash jarayoni tugadi.]
-    J --> K[End] '''
+    J --> K[End]
+```
